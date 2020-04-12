@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<div class="container text-center">
+    <h1>Password Generator</h1>
+
+    <form action="{% url 'genPas' %}">
+        <!-- form tells its form -->
+        <!-- action=> tells where will it lead (or take you) -->
+        <!-- {% url 'genPas' %}"  ===> genPas is an ALIAS to URL: resultpass/  -->
+        <select name="length">
+         <!-- "length is the name for this feild, its value can be accesed by this name" -->
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9" selected="selected" >9</option>
+            <!-- selected tells to be selected by default -->
+            <option value="10">10</option>
+        </select>
+        <br>
+        <input type="checkbox" name="uppercase"> Uppercase
+        <br>
+        <input type="checkbox" name="numbers"> Numbers
+        <br>
+        <input type="checkbox" name="special"> Special
+        <br>
+
+        <!--v1  <input type="submit" value="Genrat Pass"> -->
+        <!-- input can be of many type(s) -->
+        <input type="submit" value="Genrat Pass" class="btn btn-primary">
+    </form>
+
+</div>
